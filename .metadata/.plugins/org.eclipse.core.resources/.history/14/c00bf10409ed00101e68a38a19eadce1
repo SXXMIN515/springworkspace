@@ -1,0 +1,14 @@
+package com.yedam.app.common;
+
+public class TVExample {
+
+	public static void main(String[] args) {
+//		TV tv = new SamsungTV();
+		TV tv = new LGTV();
+		tv.powerOn();
+		tv.volumeUp();
+		tv.powerOff();
+		
+	}
+
+}

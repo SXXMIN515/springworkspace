@@ -1,0 +1,23 @@
+package com.yedam.app.common;
+
+public class LGTV implements TV {
+
+	@Override
+	public void powerOn() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void volumeUp() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void powerOff() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

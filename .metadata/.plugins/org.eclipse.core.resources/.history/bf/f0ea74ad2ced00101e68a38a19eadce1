@@ -1,0 +1,9 @@
+package com.yedam.app.java;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration // Java base의 설정파일
+public class JavaConfig {
+	@Bean //Spring이 관리할 Bean 등록
+	
+}

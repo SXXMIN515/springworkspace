@@ -1,0 +1,9 @@
+package com.yedam.app.anotation;
+
+public class RestaurantExample {
+
+	public static void main(String[] args) {
+
+	}
+
+}

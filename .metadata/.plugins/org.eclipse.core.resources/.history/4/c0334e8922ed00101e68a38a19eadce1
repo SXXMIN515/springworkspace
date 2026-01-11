@@ -1,0 +1,11 @@
+package com.yedam.app.common;
+
+public class Restaurant {
+	// 필드
+	private Chef chef;
+	
+	// 생성자
+	
+	
+	// 메소드
+}
