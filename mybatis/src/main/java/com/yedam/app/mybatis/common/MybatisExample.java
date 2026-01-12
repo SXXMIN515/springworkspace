@@ -23,6 +23,8 @@ public class MybatisExample {
 //		selectDeptAll();
 //		selectDeptInfo();
 		insertDeptInfo();
+//		updateDeptInfo();
+//		deleteDeptInfo();
 
 	}
 
@@ -87,23 +89,24 @@ public class MybatisExample {
 	public static void insertDeptInfo() {
 		DeptVO dept = new DeptVO();
 		dept.setDepartmentName("Yedam");
+		dept.setManagerId(100);
+		dept.setLocationId(1700);
 
 		int result = deptMap.insertInfo(dept);
 		System.out.println(result);
 	}
 	
 	public static void updateDeptInfo() {
-		EmpVO emp = new EmpVO();
-		emp.setEmployeeId(209);
-		emp.setFirstName("kil-dong");
-		emp.setSalary(1000);
+		DeptVO dept = new DeptVO();
+		dept.setDepartmentName("Spring");; 
+		dept.setDepartmentId();
 		
-		int result = empMap.updateInfo(emp);
+		int result = deptMap.updateInfo(dept);
 		System.out.println(result);
 	}
 	
 	public static void deleteDeptInfo() {
-		int result = empMap.deleteInfo(209);
+		int result = deptMap.deleteInfo();
 		System.out.println(result);
 	}
 }
