@@ -26,14 +26,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.yedam.app"/>
-			<item value="com.yedam.app.jdbc"/>
 		</list>
 		<list key="groupId">
-			<item value="com.yedam.app"/>
 		</list>
 		<list key="artifactId">
-			<item value="jdbc"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -54,6 +50,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="mybatis"/>
 			<item value="sp01"/>
 		</list>
 		<list key="projectNameTemplate">
