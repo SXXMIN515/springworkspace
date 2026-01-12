@@ -27,15 +27,11 @@
 		            (
 						department_id
 						, department_name
-						, manager_id
-						, location_id
 					)
 					VALUES
 					(
 						DEPARTMENTS_SEQ.NEXTVAL
 						, #{departmentName}
-						, #{managerId}
-						, #{locationId}
 					)
 	</insert>
 	<!-- 수정 -->
@@ -47,6 +43,6 @@
 	<!-- 삭제 -->
 	<delete id="deleteInfo" parameterType="int">
 		DELETE FROM departments
-		WHERE  department_id = #{departmentId}
+		WHERE  department_id = #{deptId}
 	</delete>
 </mapper>

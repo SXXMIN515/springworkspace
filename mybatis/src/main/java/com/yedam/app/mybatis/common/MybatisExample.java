@@ -89,8 +89,6 @@ public class MybatisExample {
 	public static void insertDeptInfo() {
 		DeptVO dept = new DeptVO();
 		dept.setDepartmentName("Yedam");
-		dept.setManagerId(100);
-		dept.setLocationId(1700);
 
 		int result = deptMap.insertInfo(dept);
 		System.out.println(result);
