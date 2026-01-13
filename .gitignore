@@ -1,2 +1,6 @@
 /.metadata/
 .metadata/
+.classpath
+bin/
+.settings/
+.properties
