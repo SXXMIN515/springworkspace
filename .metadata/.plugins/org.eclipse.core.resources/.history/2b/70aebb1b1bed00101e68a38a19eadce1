@@ -1,9 +1,0 @@
-package com.yedam.app.xml;
-
-public class TVExample {
-
-	public static void main(String[] args) {
-		ApplicationContext ctx = 
-	}
-
-}
