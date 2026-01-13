@@ -1,12 +1,11 @@
-# Eclipse / Workspace
-.metadata/
-.settings/
-.classpath
+# macOS
+.DS_Store
+
+# Eclipse
 .project
+.classpath
+.settings/
+.metadata/
 
 # Build
 bin/
-target/
-
-# OS
-.DS_Store
