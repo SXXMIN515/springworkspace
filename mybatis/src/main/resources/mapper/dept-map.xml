@@ -26,12 +26,12 @@
 		INSERT INTO departments 
 		            (
 						department_id
-						, department_name
+					   ,department_name
 					)
 					VALUES
 					(
 						DEPARTMENTS_SEQ.NEXTVAL
-						, #{departmentName}
+					   ,#{departmentName}
 					)
 	</insert>
 	<!-- 수정 -->

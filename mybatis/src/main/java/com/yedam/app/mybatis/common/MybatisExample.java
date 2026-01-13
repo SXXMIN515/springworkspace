@@ -14,15 +14,17 @@ public class MybatisExample {
 	private static DeptMapper deptMap = new DeptMapperImpl();
 
 	public static void main(String[] args) {
+		// employees
 //		selectAll();
 //		selectInfo();
 //		insertInfo();
 //		updateInfo();
 //		deleteInfo();
 		
-//		selectDeptAll();
+		// departments
+		selectDeptAll();
 //		selectDeptInfo();
-		insertDeptInfo();
+//		insertDeptInfo();
 //		updateDeptInfo();
 //		deleteDeptInfo();
 
@@ -97,14 +99,14 @@ public class MybatisExample {
 	public static void updateDeptInfo() {
 		DeptVO dept = new DeptVO();
 		dept.setDepartmentName("Spring");; 
-		dept.setDepartmentId();
+		dept.setDepartmentId(470);
 		
 		int result = deptMap.updateInfo(dept);
 		System.out.println(result);
 	}
 	
 	public static void deleteDeptInfo() {
-		int result = deptMap.deleteInfo();
+		int result = deptMap.deleteInfo(470);
 		System.out.println(result);
 	}
 }

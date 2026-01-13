@@ -7,7 +7,6 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.yedam.app.mybatis.common.MybatisSqlSessionFactory;
 import com.yedam.app.mybatis.service.DeptVO;
-import com.yedam.app.mybatis.service.EmpVO;
 
 public class DeptMapperImpl implements DeptMapper{
 	private SqlSessionFactory factory = MybatisSqlSessionFactory.getSqlSessionFactory();
