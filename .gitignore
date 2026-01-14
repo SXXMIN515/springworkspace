@@ -4,13 +4,25 @@
 .project
 .classpath
 
+<<<<<<< HEAD
 # Maven / Gradle
 target/
 build/
 
 # Logs
+=======
+# Maven
+target/
+build/
+>>>>>>> ee47284 (remove eclipse metadata and add gitignore)
 *.log
 
 # OS
 .DS_Store
 Thumbs.db
+".metadata/" 
+"sp02/.DS_Store" 
+"target/" 
+"*.log" 
+".DS_Store" 
+"Thumbs.db" 
