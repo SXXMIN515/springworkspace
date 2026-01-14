@@ -1,11 +1,16 @@
-# macOS
-.DS_Store
-
 # Eclipse
+.metadata/
+.settings/
 .project
 .classpath
-.settings/
-.metadata/
 
-# Build
-bin/
+# Maven / Gradle
+target/
+build/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
