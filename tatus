@@ -1,0 +1,21 @@
+* [33m96cf88a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m remove eclipse metadata and add gitignore
+* [33m7b689a8[m fix: ignore eclipse metadata and build outputs
+* [33m0a44e73[m 260114
+*   [33me7cd8c7[m Merge branch 'main' of https://github.com/SXXMIN515/springworkspace
+[32m|[m[33m\[m  
+[32m|[m * [33m2507d18[m Update .gitignore
+[32m|[m * [33m880666d[m Update .gitignore
+[32m|[m * [33me03eefc[m Update .gitignore
+[32m|[m * [33m9180ef1[m Update .gitignore
+* [33m|[m [33mfc209b0[m 260114
+[33m|[m[33m/[m  
+*   [33m1d683b6[m resolve conflict by removing eclipse metadata
+[34m|[m[35m\[m  
+[34m|[m * [33ma201f02[m 260113
+* [35m|[m [33m4ff8858[m remove eclipse metadata from git
+* [35m|[m [33m7731e40[m ignore eclipse metadata
+[35m|[m[35m/[m  
+* [33m26e0c21[m 260112
+* [33mfa1554d[m 260112
+* [33m4c1d3c8[m 260112
+* [33mb0a89d7[m 2601012
