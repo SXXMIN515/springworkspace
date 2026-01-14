@@ -26,3 +26,7 @@ Thumbs.db
 "*.log" 
 ".DS_Store" 
 "Thumbs.db" 
+".metadata/" 
+"target/" 
+".DS_Store" 
+"*.log" 
