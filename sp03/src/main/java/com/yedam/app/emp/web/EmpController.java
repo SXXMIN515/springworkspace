@@ -36,7 +36,7 @@ public class EmpController {
 		// 3) 데이터를 출력할 페이지 선택
 		return "emp/list"; // 페이지 이름은 '/'로 시작하면 안됨.
 		// prefix => classpath:/templates/
-		// subfix => .html
+		// sufix => .html
 	}
 	
 	// 단건조회
