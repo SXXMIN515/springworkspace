@@ -13,30 +13,30 @@
       	  @{}, 링크표현식 => 경로를 생성할 때 사용 
       	  href, src, action 속성에서 주로 사용
       */-->
-      <form name="insertForm" th:action="@{/empInsert}" method="post" class="form-floating">
-        <div>
+      <form name="insertForm" th:action="@{/empInsert}" method="post">
+        <div class="form-floating mb-3">
+          <input class="form-control" id="ename" type="text" name="lastName" />
           <label for="ename">이름</label>
-          <input id="ename" type="text" name="lastName" />
         </div>
-        <div>
+        <div class="form-floating mb-3">
+          <input class="form-control" id="email" type="text" name="email" />
           <label for="email">이메일</label>
-          <input id="email" type="text" name="email" />
         </div>
-        <div>
+        <div class="form-floating mb-3">
+          <input class="form-control" id="hdate" type="date" name="hireDate" />
           <label for="hdate">입사일</label>
-          <input id="hdate" type="date" name="hireDate" />
         </div>
-        <div>
+        <div class="form-floating mb-3">
+          <input class="form-control" id="job" type="text" name="jobId" />
           <label for="job">업무</label>
-          <input id="job" type="text" name="jobId" />
         </div>
-        <div>
+        <div class="form-floating mb-3">
+          <input class="form-control" id="sal" type="number" step="0.01" name="salary" />
           <label for="sal">급여</label>
-          <input id="sal" type="number" step="0.01" name="salary" />
         </div>
         <div>
-          <button type="reset">초기화</button>
-          <button type="submit">등록</button>
+          <button type="reset" class="btn btn-success">초기화</button>
+          <button type="submit" class="btn btn-primary">등록</button>
         </div>
       </form>
     </div>
