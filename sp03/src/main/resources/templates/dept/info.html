@@ -27,9 +27,9 @@
           <label for="lid">지역번호</label>
         </div>
         <div>
-          <button type="button" class="btn btn-primary">수정</button>
-          <button type="button" class="btn btn-success">목록</button>
-          <button type="button" class="btn btn-warning">삭제</button>
+          <button type="button" th:onclick="|location.href='@{/deptUpdate(departmentId=${dept.departmentId})}'|" class="btn btn-primary">수정</button>
+          <button type="button" th:onclick="|location.href='@{/deptList}'|" class="btn btn-success">목록</button>
+          <button type="button" th:onclick="|location.href='@{/deptDelete(deptId=${dept.departmentId})}'|" class="btn btn-warning">삭제</button>
         </div>
       </div>
     </div>

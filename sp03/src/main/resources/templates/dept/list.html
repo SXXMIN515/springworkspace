@@ -21,7 +21,7 @@
 			</thead>
 			<tbody>
 				<th:block th:each="info, status : ${depts}">
-				<tr>
+				<tr th:onclick="|location.href='@{/deptInfo(departmentId=${info.departmentId})}'|">
 					<td>[[ ${status.count} ]]</td>
 					<td>[[ ${info.departmentId} ]]</td>
 					<td>[[ ${info.departmentName} ]]</td>
