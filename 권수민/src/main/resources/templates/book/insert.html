@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layouts/default_layout}" layout:fragment="Content">
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<div class="container text-center">
+		<form name="insertForm" th:action="@{/bookInsert}" method="post">
+			<h3>도서 등록</h3>
+			<table class="table">
+				<tr>
+					<th>도서번호</th>
+					<td><input type="text" th:value="${newBno}" name="bookNo" readonly></td>
+				</tr>
+				<tr>
+					<th>도서명</th>
+					<td><input type="text" name="bookName"></td>
+				</tr>
+				<tr>
+					<th>도서표지</th>
+					<td><input type="text" name="bookCoverimg"></td>
+				</tr>
+				<tr>
+					<th>출판일자</th>
+					<td><input type="text" name="bookDate"></td>
+				</tr>
+				<tr>
+					<th>금액</th>
+					<td><input type="text" name="bookPrice"></td>
+				</tr>
+				<tr>
+					<th>출판사</th>
+					<td><input type="text" name="bookPublisher"></td>
+				</tr>
+				<tr>
+					<th>도서소개</th>
+					<td height="100px" width="200px">
+						<textarea name="bookInfo"></textarea>
+					</td>
+				</tr>
+			</table>
+			<div>
+				<button type="submit">등록</button>
+				<button type="button">조회</button>
+			</div>
+		</form>
+	</div>
+	<script>
+     document.querySelector('form[name="insertForm"]')
+             .addEventListener('submit', bookInsertAjax);
+
+        
+    function bookInsertAjax(event) {
+      event.preventDefault();
+
+      const formTag = event.currentTarget;
+      
+      let bookNameTag = formTag.querySelector('[name="bookName"]');
+      if(bookNameTag.value == '') {
+        alert("도서명이 입력되지 않았습니다.");
+        bookNameTag.focus();
+        return;
+      }
+     
+      alert('도서등록이 완료 되었습니다.');
+      formTag.submit();
+    }            
+	</script>
+</body>
+</html>

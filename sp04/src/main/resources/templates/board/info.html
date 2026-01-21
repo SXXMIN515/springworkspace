@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layouts/default_layout}"
+      layout:fragment="Content">
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+      <div class="container text-center">
+            <h3>게시글 정보</h3>
+            <table class="table">
+                  <tr>
+                        <th>번호</th>
+                        <td th:text="${board.bno}"></td> <!--/* 원칙 */-->
+                  </tr>
+                  <tr>
+                        <th>제목</th>
+                        <td>[[ ${board.title} ]]</td> <!--/* text는 [[ ${} ]] 가능 */-->
+                  </tr>
+                  <tr>
+                        <th>작성자</th>
+                        <td>[[ ${board.writer} ]]</td>
+                  </tr>
+                  <tr>
+                        <th>내용</th>
+                        <td height="100px" width="200px">[[ ${board.contents} ]]</td>
+                  </tr>
+                  <tr>
+                        <th>첨부파일</th>
+                        <!-- /images/cat.jpg -->
+                        <td><img style="width:50%;" th:src="@{/images/{fileName}(fileName=${board.image})}"></td>
+                  </tr>
+                  <tr>
+                        <th>작성일자</th> <!--/* yyyy/MM/dd */-->
+                        <td>[[ ${#dates.format(board.regdate, 'yyyy/MM/dd')} ]]</td>
+                  </tr>
+            </table>
+            <div>
+            	<button type="button" th:onclick="|location.href='@{/boardList}'|">목록</button>
+            </div>
+      </div>
+</body>
+</html>

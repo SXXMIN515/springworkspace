@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yedam.app.board.mapper.BookMapper">
+	<!-- 도서목록조회 -->
+	<select id="selectAll" resultType="BookVO">
+		SELECT book_no
+               , book_name
+               , book_coverimg
+               , book_date
+               , book_price
+               , book_publisher
+               , book_info
+        FROM book_tbl_06
+        ORDER BY book_no
+	</select>
+	
+	<!-- 마지막 도서 번호 조회 -->
+	<select id="selectInfo" resultType="int">
+		SELECT NVL(MAX(book_no) + 1, 100)
+		FROM book_tbl_06
+	</select>
+	
+	<!-- 도서정보등록 -->
+	<insert id="insertInfo" parameterType="BookVO">
+		<!-- <selectKey keyProperty="bookNo" resultType="Integer" order="BEFORE">
+			SELECT NVL(MAX(book_no) + 1, 100)
+			FROM book_tbl_06
+		</selectKey> -->
+		INSERT INTO book_tbl_06 
+		            (
+		                book_no
+		                , book_name
+		                , book_coverimg
+		                , book_date
+		                , book_price
+		                , book_publisher
+		                , book_info
+		            )
+		    VALUES (
+		                #{bookNo}
+		                , #{bookName}
+		                , #{bookCoverimg}
+		                , #{bookDate}
+		                , #{bookPrice}
+		                , #{bookPublisher}
+		                , #{bookInfo}
+		            )
+	</insert>
+	
+	<!-- 도서대여현황 조회 -->
+	<select id="selectRent" resultType="BookVO">
+		SELECT b.book_no
+		      ,b.book_name
+		      ,SUM(r.rent_price) AS "rent_price"
+		      ,COUNT(r.rent_status) AS "rent_status"
+		FROM book_tbl_06 b
+		JOIN rent_tbl_06 r
+		  ON b.book_no = r.book_no
+		GROUP BY b.book_no, b.book_name
+		ORDER BY book_no
+	</select>
+</mapper>
